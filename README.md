@@ -1,6 +1,1 @@
 "# Compressive-Strength-Of-RCA-Prediction" 
-"# Compressive-Strength-Of-RCA-Prediction" 
-"# prediction" 
-"# prediction" 
-"# prediction" 
-"# Compressive-Strength-Of-RCA-Prediction" 
