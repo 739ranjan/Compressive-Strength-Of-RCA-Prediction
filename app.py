@@ -5,7 +5,7 @@ import pickle
 
 app = Flask(__name__)
 # data = pd.read_csv("MeanImputedData.csv")
-xgb = pickle.load(open("xgb_model.pkl", 'rb'))
+xgb = pickle.load(open("XGB_model.pkl", 'rb'))
 
 @app.route('/')
 def index():
