@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Compressive Strength of RCA</title>
+    <!-- Link to Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
+<body class="bg-dark">
+    <div class="row" style="margin: 2%;">
+        <div class="card" style="width: 100%; height: 100%; margin-top:20px">
+            <div class="card-header" style="text-align: center">
+                <h1> Compressive Strength of RCA Predictor</h1>
+            </div>
+            <div class="card" style="text-align: center">
+                <h5> Enter all the below value to predict Compressive Strength of RCA Calculator</h5>
+            </div>
+            <div class="card-body" style="margin-left: 5px; margin-right: 5px">
+                <form method="post" action = "/" accept-charset="utf-8">
+
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6" >
+                            <label >Effective water-to-cement ratio:</label>
+                            <input type="number"  step="0.001" class="form-control" id="eff_water_cement" name="eff_water_cement" placeholder="Effective water-to-cement ratio" required="1" >
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="h1">Aggregate-to-cement ratio (a/c):</label>
+                            <input type="number" step="0.001" class="form-control" id="agg_cement" name="agg_cement" placeholder="Aggregate-to-cement ratio (a/c)" required="1">
+                        </div>
+                            <div class="form-group col-md-6">
+                            <label for="h1">RCA replacement ratio (RCA %):</label>
+                            <input type="number" step="0.001" class="form-control" id="RCA_replacement" name="RCA_replacement" placeholder="RCA replacement ratio (RCA %)" required="1">
+                        </div>
+                            <div class="form-group col-md-6">
+                            <label>Parent concrete strength(MPa):</label>
+                            <input type="number" step="0.001" class="form-control" id="parent_con_strength" name="parent_con_strength" placeholder="Parent concrete strength(MPa)" required="1">
+                            </div>
+                            <div class="form-group col-md-6">
+                            <label>Nominal maximum RCA size(mm):</label>
+                            <input type="number" step="0.001" class="form-control" id="nominal_RCA" name="nominal_RCA" placeholder="Nominal maximum RCA size(mm)" required="1">
+                        </div>
+                            <div class="form-group col-md-6">
+                            <label>Nominal maximum NA size(mm):</label>
+                            <input type="number" step="0.001" class="form-control" id="nominal_NA" name="nominal_NA" placeholder="Nominal maximum NA size(mm)" required="1">
+                        </div>
+                            <div class="form-group col-md-6">
+                            <label>Water absorption of RCA(WARCA) (%):</label>
+                            <input type="number" step="0.001" class="form-control" id="water_abs_RCA" name="water_abs_RCA" placeholder="Water absorption of RCA(WARCA) (%)" required="1">
+                        </div>
+                            <div class="form-group col-md-6">
+                            <label>Water absorption of NA:</label>
+                            <input type="number" step="0.001" class="form-control" id="water_abs_NA" name="water_abs_NA" placeholder="Water absorption of NA" required="1">
+                        </div>
+                            <div class="form-group col-md-6">
+                            <label>Los Angeles abrasion of RCA:</label>
+                            <input type="number" step="0.001" class="form-control" id="los_angeles_RCA" name="los_angeles_RCA" placeholder="Los Angeles abrasion of RCA" required="1">
+                        </div>
+                                <div class="form-group col-md-6">
+                                    <label>Los Angeles abrasion of NA:</label>
+                                    <input type="number" step="0.001" class="form-control" id="los_angeles_NA" name="los_angeles_NA" placeholder="Los Angeles abrasion of NA" required="1">
+                                </div>
+                             <div class="col-md-12 form-group" align="center">
+                                    <button class="btn btn-primary form-control-control" id="btn" style="width: 30%;"><b>Predict</b></button>
+                                </div>
+                            </div>
+
+                </form>
+                </br>
+
+                <div class="col-md-12" style="text-align:center">
+                    <h3><span id="prediction">{{results}}</span></h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
